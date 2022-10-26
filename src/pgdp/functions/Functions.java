@@ -1,9 +1,11 @@
 package pgdp.functions;
 
+import java.util.logging.StreamHandler;
+
 public class Functions {
 
     public static int square(int n) {
-        int square = n*n;
+        int square = n * n;
         return square;
     }
 
@@ -17,17 +19,26 @@ public class Functions {
 
     public static int cube(int n) {
         // TODO
-        return 0;
+        n = n * n * n;
+        return n;
     }
 
     public static int average(int a, int b, int c) {
         // TODO
-        return 0;
+        int x;
+        x = (a + b + c) / 3;
+        return x;
     }
 
     public static boolean isPythagoreanTriple(int a, int b, int c) {
         // TODO: Benutze in dieser Methode keine arithmetischen Operatoren (i.e. +, -, *, /, % etc.)!
-        return false;
-    }
+        if (sumOfSquares(a, b) == square(c)) {
+            return true;
+        }
+        else {
+            return false;
+        }
 
+
+    }
 }
